@@ -1,0 +1,418 @@
+*, *:before, *:after{
+    margin:0;
+    padding:0;
+    outline:0;
+    box-sizing:border-box;
+
+}
+
+header{
+  background-color:  #140333;
+}
+body{
+    font-family:"Open Sans", Arial, Helvetica, sans-serif;
+    background-color:white;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.item1 {
+    grid-area: header;
+}
+.item4{
+    grid-area:section;
+}
+.item2 {
+    grid-area: main;
+}
+
+.item3 {
+    grid-area: footer;
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+z-index:1;
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.text {font-size: 11px}
+}
+
+
+.grid-container {
+    display:grid;
+    grid-template-areas:
+        'header header header header header header'
+        'section section section section section section'
+        'main main main main main main'
+        'footer footer footer footer footer footer';
+
+        
+}
+.item1{
+    display:flex;
+    background-color:#140333;
+    height:65px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom: 1px solid white;
+    box-shadow: 5px 0 10px rgb(0, 0, 0, .6);
+    opacity:0.98;
+    /* cualquier cosa esto no existia ´-´*/
+}
+.menu{
+    background-color:#140333;
+    height:75px;
+    width:100vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom: 1px solid orangered;
+    border-top: 1px solid orangered;
+    box-shadow: 5px 0 10px rgb(0, 0, 0, .6);
+    opacity:0.98;
+    max-width: 100%;
+    position: fixed;
+    margin-top: -30px;
+}
+
+.logo{
+    color:white;
+    font-size: 35px;
+    padding: 0 80px;
+    font-weight: bold;
+    border: 6px solid white;
+    border-radius: 36px;
+    padding: 6px 12px;
+    
+}
+
+.menu_items{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu_items li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menu_items li a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+}
+
+.menu_items li:hover, li.activo{
+background-color: rgba(255, 255, 255, 0.3);
+transition: 2s;
+}
+
+.btn_menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+ul.show{
+    top: 65px;
+}
+@media screen and (max-width: 952px){
+    .grid-container {
+        grid-template-areas:
+            'header header header header header header'
+            'section section section section section section'
+            'main  main main main main main'
+            'footer footer footer footer footer footer'
+        ;
+    }
+    .logo {
+       font-size:30px;
+       padding-left:35px;
+    }
+    .menu_items li a{
+      font-size: 16px;
+    }
+}
+@media screen and (max-width: 858px) {
+    .grid-container {
+        grid-template-areas:
+            'header header header header header header'
+            'section section section section section section'
+            'main  main main main main main'
+            'footer footer footer footer footer footer'
+        ;
+        
+    }
+    .redes a{
+        width: 30px;
+        
+    }
+    footer h2{
+        font-size:20px;
+    }
+    .menu{
+        height: 65px;
+    }
+    .btn_menu{
+        display: inline-flex;
+    }
+    .menu_items {
+        position:fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: #140333;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .menu_items li{
+       margin: 30px 0 0 0;
+       line-height: 30px;
+    }
+    /*hasta aqui arriba anda */
+    .menu_items li a{
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .menu_items li a:hover{
+        color: #e9183b;
+    }
+    .logo {
+     font-size:25px;
+     padding-left: 3px;
+     /* cualquier cosa era 35px aqui*/
+    }
+    .item2 li img{
+        margin-left: 3px;
+        margin-top: 2px;
+        width:50%;
+    }
+    
+    .item2 h1{
+        margin-top: auto;
+        color: red;
+        font-size: 25px;
+        text-align: center;
+    }
+    .leg{
+        font-size:20px;
+    }
+
+   
+}
+@media screen and (max-width: 858px) and (orientation: landscape){
+    .grid-container {
+        grid-template-areas:
+            'header header header header header header'
+            'section section section section section section'
+            'main  main main main main main'
+            'footer footer footer footer footer footer'
+        ;
+        
+    }
+    .menu_items li{
+        margin: 5px 0 0 0;
+    }
+    .menu_items{
+        overflow: scroll;
+        height: calc(100% - 65px);
+    }
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    white-space: normal;
+}
+
+.item3{
+    display:flex;
+}
+
+footer{
+    background-color:#140333;
+    color:white;
+    width:100%;
+    bottom:100px;
+    max-width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: -20px;
+    margin-top: -40px;
+}
+footer :first-child{
+    text-align:center;
+}
+.redes {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:3vh;
+    max-width: 100%;
+    
+}
+
+.redes a{
+    color:white;
+    width:50px;
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+}
+
+.redes a:hover{
+    transform: scale(1.2);
+}
+
+
+#instagram:hover{
+        border-radius: 30px;
+        color: #fff;
+        background: #d6249f;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+}
+
+#twitch:hover{
+    border-radius: 30px;
+    color: purple;
+    background-color: white;
+}
+
+#facebook:hover{
+    border-radius: 30px;
+    color: blue;
+    background-color: white;
+}
+
+#youtube:hover{
+    border-radius: 30px;
+    color: red;
+    background-color: white;
+}
+
+.item2 fieldset{
+    background-image: url(img/fondopacman.png);
+    max-width: 100%;
+
+}
+
+.item2 h1 a{
+    color: red;
+    max-width: 100%;
+    text-decoration: none;
+}
+
+.item2 a:hover{
+    color:purple;
+    transition: all .4s ease-in-out;
+}
+
+.item2 li img{
+    vertical-align:top;
+    margin-left: 15px;
+    margin-top: 10px;
+    max-width: 100%;
+    display: inline-block;
+    border: 1px solid black;
+    
+}
+
+.costado{
+    display: inline-flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 50px;
+    line-height: 35px;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.costado a{
+    text-decoration: none;
+    color: black;
+}
+
+.banner {
+    position: flex;
+}
+
+.banner img {
+    max-width: 100%;
+}
+
+.leg{
+    display:flex;
+    border-radius:3px;
+    border-color:red;
+    color:red;
+    border: 6px solid red;
+    border-radius: 36px;
+    padding: 6px 12px;
+}

@@ -1,0 +1,322 @@
+body,
+ul,
+li,
+h1,
+h2,
+a {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+*{
+    box-sizing: border-box;
+}
+
+ul { list-style-type: none;
+}
+
+.grid-layout{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 100%;
+    margin: 0px auto;
+    top: 1px;
+    padding: 10px;
+    white-space: normal;
+    
+}
+
+
+.c2{
+    background-image: url(img/fondopacman.png);
+    border: 1px solid black;
+    display: flex;
+}
+
+ul h1 a{
+    color: red;
+    padding-left: 12px;
+    margin-left: 150px;
+    margin-top: 15px;
+    text-align: justify;
+    text-decoration: none;
+    
+}
+
+.juegos a:hover{
+    color: purple;
+    transition: all .3s ease-in-out;
+}
+
+div li img{
+    vertical-align:top;
+    margin-left: 15px;
+    margin-top: 10px;
+    border: 1px solid black;
+    
+}
+.costado{
+    display:inline-flex;
+    margin-left: 40px;
+    margin-top: 50px;
+    line-height: 35px;
+    text-align: justify;
+}
+
+.costado a{
+    text-decoration: none;
+    color: black;
+}
+
+.costado a:hover{
+    color: purple;
+}
+
+.item1{
+    display:flex;
+    height:65px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom: 1px solid white;
+    box-shadow: 5px 0 10px rgb(0, 0, 0, .6);
+    opacity:0.98;
+    /* cualquier cosa esto no existia ´-´*/
+}
+.menu{
+    background-color:#140333;
+    height:75px;
+    width:100vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom: 1px solid orangered;
+    border-top: 1px solid orangered;
+    box-shadow: 5px 0 10px rgb(0, 0, 0, .6);
+    opacity:0.98;
+    max-width: 100%;
+    position: fixed;
+    margin-top: -40px;
+    margin-left: -9.52px;
+}
+
+.logo{
+    color:white;
+    font-size: 35px;
+    padding: 0 80px;
+    font-weight: bold;
+    border: 6px solid white;
+    border-radius: 36px;
+    padding: 6px 12px;
+    
+}
+
+.menu_items{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu_items li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menu_items li a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+}
+
+.menu_items li:hover, li.activo{
+background-color: rgba(255, 255, 255, 0.3);
+transition: 2s;
+}
+
+.btn_menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+ul.show{
+    top: 65px;
+}
+
+.siguiente{
+   float: right;
+
+}
+
+.boton{
+    background-image: linear-gradient(320deg, #4ec2c9 0, #4cc1d1 3.57%, #4dc0d8 7.14%, #52bfde 10.71%, #5abee3 14.29%, #64bce7 17.86%, #6fbaeb 21.43%, #7bb8ed 25%, #87b5ed 28.57%, #94b2ed 32.14%, #a0afec 35.71%, #acade9 39.29%, #b7aae5 42.86%, #c1a7e1 46.43%, #cba4db 50%, #d4a1d5 53.57%, #db9fcd 57.14%, #e19dc6 60.71%, #e69cbe 64.29%, #ea9bb6 67.86%, #ec9bad 71.43%, #ee9ba5 75%, #ee9c9d 78.57%, #ed9d95 82.14%, #ea9f8e 85.71%, #e7a188 89.29%, #e3a482 92.86%, #dea67d 96.43%, #d8a97a 100%);
+}
+
+@media screen and (max-width: 952px){
+    .logo {
+       font-size:30px;
+       padding-left:35px;
+    }
+    .menu_items li a{
+      font-size: 16px;
+    }
+
+}
+@media screen and (max-width: 858px) {
+
+    .redes a{
+        width: 30px;
+        
+    }
+    footer h2{
+        font-size:20px;
+    }
+    .menu{
+        height: 65px;
+    }
+    .btn_menu{
+        display: inline-flex;
+    }
+    .menu_items {
+        position:fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: #140333;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .menu_items li{
+       margin: 30px 0 0 0;
+       line-height: 30px;
+    }
+    /*hasta aqui arriba anda */
+    .menu_items li a{
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .menu_items li a:hover{
+        color: #e9183b;
+    }
+    .logo {
+     font-size:25px;
+     padding-left: 3px;
+     /* cualquier cosa era 35px aqui*/
+    }
+    
+    .c2 h1{
+        margin-top: auto;
+        color: red;
+        font-size: 25px;
+        text-align: center;
+    }
+    .leg{
+        font-size:20px;
+    }
+
+    div li img{
+        vertical-align: none;
+        display: flex;
+        margin: auto 15%;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .costado{
+        display: none;
+    }
+
+   .siguiente{
+    width: 10%;
+    display: flex;
+    margin: 0px 200px;
+   }
+
+  
+}
+@media screen and (max-width: 858px) and (orientation: landscape){
+    .menu_items li{
+        margin: 5px 0 0 0;
+    }
+    .menu_items{
+        overflow: scroll;
+        height: calc(100% - 65px);
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    div li img{
+        width: 93%;
+        
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    div li img{
+        width: 75%;
+        
+    }
+
+    .c2 h1{
+        font-size: 20px;
+        margin-right: 25%;
+    }
+
+    .siguiente{
+        margin-right: 230px;
+    }
+
+}
+
+@media screen and (max-width: 420px){
+
+    div li img{
+        width: 75%;
+        margin: auto auto;
+    }
+
+    .c2 h1{
+        font-size: 20px;
+        margin: 10px -50px;
+        float: left;
+    }
+
+    .siguiente{
+        margin-right: 40px;
+    }
+
+
+}
+
+@media screen and (max-width: 280px){
+
+    div li img{
+        width: 80%;
+        margin: auto auto;
+    }
+
+    .c2 h1{
+        font-size: 15px;
+        margin: 5px -83px;
+        float: left;
+    }
+
+    .siguiente{
+        margin-left: -50px;
+        margin-right: 50px;
+    }
+
+
+}

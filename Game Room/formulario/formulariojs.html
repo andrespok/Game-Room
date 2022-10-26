@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="formulario.js"></script>
+  <script src="menu.js"></script>
+  <script src="https://kit.fontawesome.com/6180bdd720.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="formulario.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>formulario</title>
+  <link rel="shortcut icon" href="/img/titulos.png">
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <div class="item1">
+      <header>
+        <nav class="menu">
+          <label class="logo">Game Room</label>
+          <ul class="menu_items">
+            <li class="activo"><a href="/index.html">Inicio</a></li>
+            <li><a href="/Juegos.html">Juegos</a></li>
+            <li><a href="/formulario/formulariojs.html">Unete</a></li>
+            <li><a href="mailto:codoacodoform@gmail.com">Contacto</a></li>
+            <li><a href="/juegos/Herramientas.html">Herramientas</a></li>
+          </ul>
+          <span class="btn_menu">
+            <i class="fa fa-bars"></i>
+          </span>
+        </nav>
+      </header>
+    </div>
+    <div class="item2">
+      <div id="error"></div>
+      <form id="form" action="/" method="GET">
+        <div>
+          <h3>Nombre</h3>
+          <label for="nombre"></label>
+          <input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre">
+        </div>
+        <div>
+          <h3>DNI</h3>
+          <label for="dni"></label>
+          <input id="dni" name="dni" type="number" placeholder="Ej: 25350490">
+        </div>
+        <div>
+          <h3>Contraseña</h2>
+            <label for="password"></label>
+            <input id="password" name="password" type="password" placeholder="Escribe tu contraseña">
+        </div>
+        <button class="btn-77" type="submit" onclick="formulario()">Registro</button>
+
+      </form>
+    </div>
+
+
+    <div class="item3">
+      <footer>
+        <h2>Redes sociales</h2> <br>
+        <div class="redes">
+          <a id="twitch" href="https://www.twitch.tv/" target="_blank" class="fa-brands fa-twitch"></a>
+          <a id="instagram" href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"> </a>
+          <a id="facebook" href="https://www.facebook.com/" target="_blank" class="fa-brands fa-facebook"> </a>
+          <a id="youtube" href="https://www.youtube.com/" target="_blank" class="fa-brands fa-youtube"></a>
+        </div>
+      </footer>
+    </div>
+
+</body>
+
+</html>
